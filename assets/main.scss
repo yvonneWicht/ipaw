@@ -1,7 +1,3 @@
-//@import 'tailwindcss/base';
-//@import 'tailwindcss/components';
-//@import 'tailwindcss/utilities';
-
 body {
   font-family: "Noto Sans", sans-serif;
 }
@@ -18,3 +14,37 @@ body {
     color: #ea580c;
   }
 }
+
+
+//TODO: checken was davon per Tailwind Standard umgesetzt werden kann
+/* Verstecke das ursprüngliche Checkbox-Element */
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Style für das äußere Quadrat der Checkbox */
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1/1;
+  background-color: #ffedd5;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Häkchen darstellen, wenn die Checkbox angeklickt ist */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0px;
+  width: 8px;
+  height: 20px;
+  border: solid orange;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
