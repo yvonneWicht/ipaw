@@ -1,16 +1,15 @@
 <script setup lang="ts">
+useHead({
+  title: 'KleiderHerz - Registrierung',
+});
 
+const formData = useFormData();
 const {registrationAddressShow, toggleRegistrationAddress} = useRegistration();
-const {formData, submitForm} = useValidation();
+const { submitForm } = useValidation();
 
 registrationAddressShow.value = false;
 
-useHead({
-  title: 'KleiderHerz - Registrierung',
-})
 </script>
-
-
 
 <template>
 <!--  TODO: Componente daraus erstellen-->
@@ -69,6 +68,21 @@ useHead({
           </button>
         </div>
 
+        <div id="alert" class="bg-red-200 text-red-700 border-red-700 rounded-lg border-2 p-3 flex align-top">
+          <div>
+            <Icon name="gravity-ui:exclamation-shape" size="1.5em" class="me-3"/>
+          </div>
+          <div>
+            <p>Bitte bestätige die Datenschutzbestimmungen</p>
+            <p>Bitte bestätige die Datenschutzbestimmungen</p>
+            <p>Bitte bestätige die Datenschutzbestimmungen</p>
+            <p>Bitte bestätige die Datenschutzbestimmungen</p>
+            <p>Bitte bestätige die Datenschutzbestimmungen</p>
+            <p>Bitte bestätige die Datenschutzbestimmungen</p>
+          </div>
+        </div>
+
+
         <form id="registrationForm" class="mx-2 my-5" @submit.prevent="submitForm()">
 
           <div class="mb-3">
@@ -76,28 +90,28 @@ useHead({
             <div class="flex justify-between flex-col md:flex-row">
               <div class="mb-3">
                 <label for="womenClothes" class="custom-checkbox flex">
-                  <input type="checkbox" id="womenClothes" name="clothesType" value="women" v-model="formData.typeWomen">
+                  <input type="checkbox" id="womenClothes" name="clothesType" value="true" v-model="formData.typeWomen">
                   <span class="checkmark me-2"></span>
                   Damenkleidung
                 </label>
               </div>
               <div class="mb-3">
                 <label for="mensClothes" class="custom-checkbox flex">
-                  <input type="checkbox" id="mensClothes" name="clothesType" value="men" v-model="formData.typeMen">
+                  <input type="checkbox" id="mensClothes" name="clothesType" value="true" v-model="formData.typeMen">
                   <span class="checkmark me-2"></span>
                   Herrenkleidung
                 </label>
               </div>
               <div class="mb-3">
                 <label for="kidsClothes" class="custom-checkbox flex">
-                  <input type="checkbox" id="kidsClothes" name="clothesType" value="kids" v-model="formData.typeKids">
+                  <input type="checkbox" id="kidsClothes" name="clothesType" value="true" v-model="formData.typeKids">
                   <span class="checkmark me-2"></span>
                   Kinderkleidung
                 </label>
               </div>
               <div class="mb-3">
                 <label for="shoes" class="custom-checkbox flex">
-                  <input type="checkbox" id="shoes" name="clothesType" value="shoes" v-model="formData.typeShoes">
+                  <input type="checkbox" id="shoes" name="clothesType" value="true" v-model="formData.typeShoes">
                   <span class="checkmark me-2"></span>
                   Schuhe
                 </label>
@@ -109,9 +123,9 @@ useHead({
             <div class="flex flex-col">
               <select id="targetArea" name="targetArea" class="bg-orange-100 h-12 px-3" v-model="formData.targetArea">
                 <option value selected>Wohin soll die Spende gehen?</option>
-                <option value="ukraine">Ukraine</option>
-                <option value="syria">Syrien</option>
-                <option value="togo">Togo</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="Syrien">Syrien</option>
+                <option value="Togo">Togo</option>
               </select>
             </div>
           </div>
@@ -124,9 +138,9 @@ useHead({
                   <label for="salutation">Anrede</label>
                   <select name="salutation" id="salutation" class="bg-orange-100 h-12 px-3" v-model="formData.salutation">
                     <option value selected>...</option>
-                    <option value="mr">Herr</option>
-                    <option value="mrs">Frau</option>
-                    <option value="div">Divers</option>
+                    <option value="Herr">Herr</option>
+                    <option value="Frau">Frau</option>
+                    <option value="Divers">Divers</option>
                   </select>
                 </div>
                 <div class="basis-1/3 flex flex-col">
@@ -190,9 +204,8 @@ useHead({
 <!--          TODO: @click werden die Daten in die Variable geschrieben, geprüft  und bei Erfolg wird auf die nächste Seite weitergeleitet,-->
 <!--          evtl. mit einem Try-Catch-Block?-->
           <button
-              class="rounded-full py-3 px-5 bg-orange-100 border-2 border-orange-400 hover:border-orange-600 text-orange-400 hover:text-orange-600 active:border-orange-700 active:text-orange700 uppercase font-semibold text-xl"
-          @click="">
-            <NuxtLink to="/registrierung/bestaetigung">Registrierung senden</NuxtLink>
+              class="rounded-full py-3 px-5 bg-orange-100 border-2 border-orange-400 hover:border-orange-600 text-orange-400 hover:text-orange-600 active:border-orange-700 active:text-orange700 uppercase font-semibold text-xl">
+            Registrierung senden
           </button>
         </form>
       </div>

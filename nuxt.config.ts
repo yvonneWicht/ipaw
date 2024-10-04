@@ -21,7 +21,6 @@ export default defineNuxtConfig({
       'Reenie Beanie': true,
       'Sue Ellen Francisco': true,
       'Delicious Handrawn': true,
-      'Roboto': true,
       'Noto Sans': true,
     }
   },

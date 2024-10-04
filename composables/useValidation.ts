@@ -1,21 +1,7 @@
 export const useValidation = () => {
 
-    let formData = {
-        typeWomen: '',
-        typeMen: '',
-        typeKids: '',
-        typeShoes: '',
-        targetArea: '',
-        salutation: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        street: '',
-        zipCode: '',
-        pickUpDate: '',
-        pickUpTime: '',
-        gdpr: '',
-    };
+    const formData = useFormData();
+    const router = useRouter()
 
     //string da PLZ auch mit 0 anfangen kann und bei number die führende null entfernt wird
     const zipCodeOffice: string = "12345";
@@ -46,16 +32,16 @@ export const useValidation = () => {
 
 // TODO: Funktion übergibt die Daten nicht korrekt
     const submitForm = () => {
-        // Daten zwischen speichern
-        this.$store.commit('setFormData', this.formData);
 
-        // Optional: Daten an eine API senden oder Seite weiterleiten
-        this.$router.push('/registrierung/bestaetigung');
+
+        router.push('/registrierung/bestaetigung');
+
+        console.log(formData.value.firstName);
+
 
     }
 
     return {
-        formData,
         submitForm
     }
 
