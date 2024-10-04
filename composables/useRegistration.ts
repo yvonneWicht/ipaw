@@ -1,7 +1,7 @@
 export const useRegistration = () => {
 
-    const registrationAddressShow = useState('registrationAddressShow', (): boolean => false);
-    const toggleRegistrationAddress = (changeState : boolean) => {
+    const registrationAddressShow = useRegistrationAddressShow();
+    const toggleRegistrationAddress = (changeState: boolean): void => {
         registrationAddressShow.value = changeState;
     }
 
