@@ -6,6 +6,7 @@
 
   <Footer />
 </template>
+// TODO: setup lang="ts" überall korrekt einfügen
 <script setup lang="ts">
 </script>
 
@@ -21,3 +22,9 @@
 
 
 <!--für die Zukunft: evlt. Pinia wenn das Projekt wächst sowie VueUse als librabry einbinden-->
+
+<!--Infos zur Verwendung von useState:-->
+<!--https://www.vuemastery.com/blog/nuxt-3-state-mangement-pinia-vs-usestate/-->
+
+<!--es wird alles clientseitig ausgeführt, es wäre eine überlegung mittels server routes die geschäftslogik -->
+<!--wie z. b. die validierung serverseitig ausführen zu lassen-->

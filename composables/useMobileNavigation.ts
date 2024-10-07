@@ -1,7 +1,7 @@
 export const useMobileNavigation = () => {
 
-    const mobileNavigationShow = useState('mobileNavigationShow', (): boolean => false);
-    const toggleMobileNavigation = () => {
+    const mobileNavigationShow = useState<boolean>('mobileNavigationShow', () => false);
+    const toggleMobileNavigation = (): void => {
         mobileNavigationShow.value = !mobileNavigationShow.value;
     }
 
