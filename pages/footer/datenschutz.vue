@@ -1,8 +1,3 @@
-<script setup lang="ts">
-useHead({
-  title: 'KleiderHerz - Datenschutz',
-});
-</script>
 <template>
   <div class="max-w-screen-md mt-36 lg:mt-64 mx-auto px-2">
     <h1 class="inline-block font-bold text-2xl md:text-4xl text-orange-400 bg-orange-100 p-2 mb-4 mx-2">
@@ -127,3 +122,9 @@ useHead({
     </p>
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'KleiderHerz - Datenschutz',
+});
+</script>

@@ -1,8 +1,3 @@
-<script setup lang="ts">
-useHead({
-  title: 'KleiderHerz - Quellen',
-});
-</script>
 <template>
   <div class="max-w-screen-md mx-auto mt-52">
     <h1 class="inline-block text-2xl md:text-4xl text-orange-400 bg-orange-100 p-2 mb-4 mx-2">Quellen</h1><br>
@@ -72,7 +67,7 @@ useHead({
       <h3 class="text-xl font-semibold">Unser Verein</h3>
       <a href="https://www.istockphoto.com/de/foto/wohlt%C3%A4tige-stiftung-gm1139776971-304763220?searchscope=image%2Cfilm"
          target="_blank">
-        <img class="md:w-3/4 mt-4" src="@/assets/images/unser-verein-landingpage.jpg" alt="Unser Verein">
+        <img class="md:w-3/4 mt-4" src="../../assets/images/association-landingpage.jpg" alt="Unser Verein">
         iStock Image Nummer 1139776971
       </a>
     </div>
@@ -96,3 +91,9 @@ useHead({
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'KleiderHerz - Quellen',
+});
+</script>
