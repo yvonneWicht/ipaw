@@ -12,13 +12,7 @@ Make sure to install the dependencies:
 
 ```bash
 # npm
-npm install -D @nuxtjs/tailwindcss
-
-# pnpm
-pnpm i -D @nuxtjs/tailwindcss
-
-# yarn
-yarn add -D @nuxtjs/tailwindcss
+npm npm i @vee-validate/nuxt
 
 # nuxi
 npx nuxi@latest module add tailwindcss

@@ -1,11 +1,3 @@
-body {
-  font-family: "Noto Sans", sans-serif;
-}
-
-.kleiderHerz {
-  font-family: "Delicious Handrawn", cursive;
-}
-
 .navBarElement {
   &:hover .navBarHeart {
     color: #fed7aa;
@@ -14,4 +6,3 @@ body {
     color: #ea580c;
   }
 }
-
