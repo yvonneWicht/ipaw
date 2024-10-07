@@ -1,16 +1,10 @@
-<script setup lang="ts">
-
-const {mobileNavigationShow, toggleMobileNavigation} = useMobileNavigation();
-const {isActive} = useNavigation();
-
-</script>
-
 <template>
   <header>
     <div class="w-screen h-48 bg-gradient-to-b from-white z-50">
       <nav class="max-w-screen-xl flex justify-center mx-auto items-center relative xl:pe-0 pe-8 text-2xl text-white">
 
-        <div class="flex justify-end bg-orange-400 items-center rounded-full lg:h-16 h-12 ms-20 lg:mt-24 mt-16 w-11/12 static">
+        <div
+            class="flex justify-end bg-orange-400 items-center rounded-full lg:h-16 h-12 ms-20 lg:mt-24 mt-16 w-11/12 static">
           <NuxtLink class="flex justify-items-start items-center absolute top-1 xl:left-3 sm:left-5 left-1 z-20" to="/">
             <img class="lg:w-36 w-24" src="@/assets/images/KleiderHerzLogo.svg" alt="KleiderHerz Logo">
             <span class="kleiderHerz lg:mt-16 mt-12 sm:text-5xl text-4xl">KleiderHerz</span>
@@ -50,7 +44,7 @@ const {isActive} = useNavigation();
             </button>
           </div>
           <div v-if="mobileNavigationShow" id="mobileNavigationDropDown"
-               class="bg-orange-400 rounded-[24px] px-8 pt-12 pb-2 flex flex-col items-end absolute lg:top-28 top-16 w-11/12 gap-y-2 z-0">
+               class="bg-orange-400 rounded-[24px] px-8 pt-12 pb-2 flex flex-col items-end absolute lg:top-28 top-16 w-11/12 gap-y-2 z-0 text-xl">
             <NuxtLink to="/registrierung" @click="toggleMobileNavigation()">Registrierung</NuxtLink>
             <NuxtLink to="/unser-verein" @click="toggleMobileNavigation()">Unser Verein</NuxtLink>
             <NuxtLink to="/engagement" @click="toggleMobileNavigation()">Engagement</NuxtLink>
@@ -62,3 +56,8 @@ const {isActive} = useNavigation();
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+const {mobileNavigationShow, toggleMobileNavigation} = useMobileNavigation();
+const {isActive} = useNavigation();
+</script>
