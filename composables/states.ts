@@ -26,7 +26,7 @@ interface FormData {
     gdpr: boolean;
 }
 
-export const useRegistrationAddressShow = () => useState('registrationAddressShow', (): boolean => false);
+export const useRegistrationAddressShow = () => useState<boolean>('registrationAddressShow', () => false);
 export const useFormData = () => useState<FormData>('formData', () => ({
     typeWomen: false,
     typeMen: false,
