@@ -1,0 +1,8 @@
+.navBarElement {
+  &:hover .navBarHeart {
+    color: #fed7aa;
+  }
+.navBarHeart.active {
+    color: #ea580c;
+  }
+}
