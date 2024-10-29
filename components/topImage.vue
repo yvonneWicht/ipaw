@@ -1,13 +1,3 @@
-<script setup lang="ts">
-defineProps({
-  desktopImage: String,
-  mobileImage: String,
-  headline1: String,
-  headline2: String
-});
-
-</script>
-
 <template>
   <div id="topImage" class="relative">
     <img class="w-screen pb-9 hidden sm:block" :src="desktopImage">
@@ -20,3 +10,12 @@ defineProps({
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps({
+  desktopImage: String,
+  mobileImage: String,
+  headline1: String,
+  headline2: String
+});
+</script>

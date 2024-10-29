@@ -1,12 +1,9 @@
 <template>
   <NuxtRouteAnnouncer/>
-
     <Header class="absolute top-0 z-50"/>
       <NuxtPage />
-
   <Footer />
 </template>
-// TODO: setup lang="ts" überall korrekt einfügen
 <script setup lang="ts">
 </script>
 
