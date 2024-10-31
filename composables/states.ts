@@ -37,6 +37,4 @@ export const useFormData = () => useState<FormData>('formData', () => ({
 }));
 
 export const useRegistrationAddressShow = () => useState<boolean>('registrationAddressShow', () => false);
-// export const useRegistrationAddressShow = () => useState<boolean>('registrationAddressShow', () => false);
-// const mobileNavigationShow = useState<boolean>('mobileNavigationShow', () => false);
 export const useOfficeZipCode = () => useState<string>('officeZipCode', () => "12345");
