@@ -95,7 +95,7 @@
             <div id="personalInformation" class="mb-3">
               <p class="text-lg font-semibold">Persönliche Daten</p>
               <div class="flex flex-col md:flex-row md:gap-4 mb-3">
-                <div class="flex flex-col basis-1/3 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-1/3 mb-3 md:mb-0">
                   <FormCustomDropdown
                       name="salutation"
                       label="Anrede"
@@ -107,7 +107,7 @@
                       v-model="formData.salutation"
                   />
                 </div>
-                <div class="flex flex-col basis-1/3 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-1/3 mb-3 md:mb-0">
                   <FormCustomField
                       name="firstName"
                       id="firstName"
@@ -115,7 +115,7 @@
                       v-model="formData.firstName"
                   />
                 </div>
-                <div class="flex flex-col basis-1/3 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-1/3 mb-3 md:mb-0">
                   <FormCustomField
                       name="lastName"
                       id="lastName"
@@ -144,7 +144,7 @@
                 />
               </div>
               <div class="flex flex-col md:flex-row md:gap-4">
-                <div class="flex flex-col basis-1/3 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-1/3 mb-3 md:mb-0">
                   <FormCustomField
                       name="zipCode"
                       id="zipCode"
@@ -153,7 +153,7 @@
                       v-model="formData.zipCode"
                   />
                 </div>
-                <div class="flex flex-col basis-2/3 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-2/3 mb-3 md:mb-0">
                   <FormCustomField
                       name="city"
                       id="city"
@@ -166,7 +166,7 @@
             <div id="date" class="mb-3">
               <p class="text-lg font-semibold">Wunsch-Termin</p>
               <div class="flex flex-col md:flex-row md:gap-4">
-                <div class="flex flex-col basis-1/2 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-1/2 mb-3 md:mb-0">
                   <FormCustomField
                       name="pickUpDate"
                       id="pickUpDate"
@@ -175,7 +175,7 @@
                       v-model="formData.pickUpDate"
                   />
                 </div>
-                <div class="flex flex-col basis-1/2 mb-3 md:mb-0">
+                <div class="flex flex-col justify-end basis-1/2 mb-3 md:mb-0">
                   <FormCustomDropdown
                       name="pickUpTime"
                       id="pickUpTime"
